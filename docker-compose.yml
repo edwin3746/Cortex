@@ -9,7 +9,6 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    restart: always
 
   cortex:
     image: thehiveproject/cortex:3.1.1
@@ -22,4 +21,3 @@ services:
     volumes:
       - ./vol/cortex/Cortex-Analyzers/analyzers:/opt/cortex/analyzers
 #      - ./vol/cortex/application.conf:/opt/cortex/conf/application.conf
-    restart: always
