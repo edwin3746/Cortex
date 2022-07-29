@@ -3,15 +3,13 @@ os: linux
 files:
   - source: /docker-compose.yml
     destination: /home/ubuntu/test
-  - source: /application.conf
-    destination: /home/ubuntu
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_hive
+    - location: scripts/start_cortex
       timeout: 300
       runas: root
 
