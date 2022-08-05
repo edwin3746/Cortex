@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /docker-compose.yml
-    destination: /home/ubuntu/test
+    destination: /home/ubuntu
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
