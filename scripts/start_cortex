@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo mv /home/ubuntu/docker-compose.yml /home/ubuntu/test/
+mv /home/ubuntu/docker-compose.yml /home/ubuntu/test
 cd /home/ubuntu/test
 sudo docker-compose up > /dev/null 2> /dev/null < /dev/null &
