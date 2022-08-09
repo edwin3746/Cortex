@@ -9,7 +9,7 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    restart: unless-stopped
+
 
   cortex:
     image: thehiveproject/cortex:3.1.1
@@ -17,7 +17,6 @@ services:
       - elasticsearch
     ports:
       - "0.0.0.0:9001:9001"
-    restart: unless-stopped
     command:
       --analyzer-url /opt/cortex/analyzers
     volumes:
