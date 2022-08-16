@@ -9,6 +9,7 @@ services:
       nofile:
         soft: 65536
         hard: 65536
+    restart: always
 
 
   cortex:
@@ -19,6 +20,7 @@ services:
       - "0.0.0.0:9001:9001"
     command:
       --analyzer-url /opt/cortex/analyzers
+    restart: always
     volumes:
       - ./vol/cortex/Cortex-Analyzers/analyzers:/opt/cortex/analyzers
 #      - ./vol/cortex/application.conf:/opt/cortex/conf/application.conf
